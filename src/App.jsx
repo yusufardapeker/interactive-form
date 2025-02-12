@@ -20,7 +20,7 @@ function App() {
 
 			<div className="actions-wrapper">
 				<Form />
-				<Completed />
+				{/* <Completed /> */}
 			</div>
 		</>
 	);

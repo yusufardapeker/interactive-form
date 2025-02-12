@@ -1,1 +1,14 @@
 @import "../../styles/global.scss";
+
+.card-back-wrapper {
+	position: absolute;
+	width: 280px;
+	top: 28px;
+	right: 20px;
+}
+.card-front-wrapper {
+	position: absolute;
+	width: 280px;
+	top: 115px;
+	left: 20px;
+}

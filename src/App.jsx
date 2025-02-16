@@ -14,7 +14,7 @@ function App() {
 	const { confirmed } = useContext(FormContext);
 
 	return (
-		<>
+		<main>
 			<picture>
 				<source media="(min-width: 1440px)" srcSet={bgMainDesktop} />
 				<img src={bgMainMobile} />
@@ -23,7 +23,7 @@ function App() {
 			<Card />
 
 			<div className="actions-wrapper">{confirmed ? <Completed /> : <Form />}</div>
-		</>
+		</main>
 	);
 }
 

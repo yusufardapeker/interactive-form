@@ -10,24 +10,40 @@ body {
 	font-family: "Space Grotesk", serif;
 	font-size: 18px;
 	font-weight: 500;
+}
+
+main {
 	position: relative;
+
+	.actions-wrapper {
+		background-color: $white;
+		padding: 92px 20px 32px;
+	}
+
+	.btn {
+		background-color: $very-dark-violet;
+		color: $white;
+		padding: 16px;
+		border-radius: 8px;
+		transition: 500ms;
+
+		&:disabled {
+			opacity: 0.7;
+			color: $dark-grayish-violet;
+			cursor: not-allowed;
+		}
+	}
 }
 
-.actions-wrapper {
-	background-color: $white;
-	padding: 92px 20px 32px;
-}
+@media (min-width: 375px) {
+	main {
+		display: flex;
 
-.btn {
-	background-color: $very-dark-violet;
-	color: $white;
-	padding: 16px;
-	border-radius: 8px;
-	transition: 500ms;
-
-	&:disabled {
-		opacity: 0.7;
-		color: $dark-grayish-violet;
-		cursor: not-allowed;
+		.actions-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex: 1;
+		}
 	}
 }

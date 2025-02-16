@@ -28,3 +28,24 @@
 		}
 	}
 }
+
+@media (min-width: 376px) {
+	.completed {
+		width: 375px;
+		gap: 40px;
+
+		.completed-icon {
+			width: 90px;
+		}
+
+		.text-content {
+			.message {
+				font-size: 32px;
+			}
+
+			.description-text {
+				font-size: 20px;
+			}
+		}
+	}
+}

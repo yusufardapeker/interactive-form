@@ -23,8 +23,13 @@ function Form() {
 	const cvcInput = useRef();
 
 	useEffect(() => {
-		expMonthInput.current.value.length === 2 && expYearInput.current.focus();
-		expYearInput.current.value.length === 2 && cvcInput.current.focus();
+		if (expMonthInput.current.value.length === 2) {
+			expYearInput.current.focus();
+
+			if (expYearInput.current.value.length === 2) {
+				cvcInput.current.focus();
+			}
+		}
 	}, [expMonth, expYear]);
 
 	return (

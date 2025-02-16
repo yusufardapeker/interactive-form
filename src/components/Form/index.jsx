@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef, useEffect } from "react";
 import "./form.scss";
 import { FormContext } from "../../context/FormContext";
 
@@ -16,6 +16,15 @@ function Form() {
 		cvc,
 		isValid,
 	} = useContext(FormContext);
+
+	const expMonthInput = useRef();
+	const expYearInput = useRef();
+	const cvcInput = useRef();
+
+	useEffect(() => {
+		expMonthInput.current.value.length === 2 && expYearInput.current.focus();
+		expYearInput.current.value.length === 2 && cvcInput.current.focus();
+	}, [expMonth, expYear]);
 
 	return (
 		<form>
@@ -55,6 +64,7 @@ function Form() {
 							placeholder="mm"
 							onChange={(e) => handleExpMonth(e)}
 							value={expMonth}
+							ref={expMonthInput}
 						/>
 						<input
 							type="number"
@@ -63,6 +73,7 @@ function Form() {
 							placeholder="yy"
 							onChange={(e) => handleExpYear(e)}
 							value={expYear}
+							ref={expYearInput}
 						/>
 					</div>
 				</div>
@@ -75,6 +86,7 @@ function Form() {
 						placeholder="e.g. 123"
 						onChange={(e) => handleCvc(e)}
 						value={cvc}
+						ref={cvcInput}
 					/>
 				</div>
 			</div>

@@ -17,10 +17,19 @@ form {
 		border: 1px solid $dark-grayish-violet;
 		border-radius: 8px;
 		padding: 12px;
+		position: relative;
 
 		&::placeholder {
 			color: $dark-grayish-violet;
 			opacity: 0.6;
+		}
+
+		&:focus {
+			border: 2px solid transparent;
+			border-radius: 8px;
+			background: linear-gradient(white, white) padding-box,
+				linear-gradient(45deg, $input-border-gradient) border-box;
+			outline: none;
 		}
 	}
 
@@ -67,5 +76,12 @@ form {
 		color: $white;
 		padding: 16px;
 		border-radius: 8px;
+		transition: 500ms;
+
+		&:disabled {
+			opacity: 0.7;
+			color: $dark-grayish-violet;
+			cursor: not-allowed;
+		}
 	}
 }

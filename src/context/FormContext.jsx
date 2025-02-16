@@ -61,8 +61,6 @@ function FormProvider({ children }) {
 		return true;
 	};
 
-	const handleConfirm = () => {};
-
 	return (
 		<FormContext.Provider
 			value={{

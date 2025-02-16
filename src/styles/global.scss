@@ -17,3 +17,17 @@ body {
 	background-color: $white;
 	padding: 92px 20px 32px;
 }
+
+.btn {
+	background-color: $very-dark-violet;
+	color: $white;
+	padding: 16px;
+	border-radius: 8px;
+	transition: 500ms;
+
+	&:disabled {
+		opacity: 0.7;
+		color: $dark-grayish-violet;
+		cursor: not-allowed;
+	}
+}

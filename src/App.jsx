@@ -7,8 +7,12 @@ import { Completed } from "./components/Completed";
 
 import bgMainMobile from "./images/bg-main-mobile.png";
 import bgMainDesktop from "./images/bg-main-desktop.png";
+import { useContext } from "react";
+import { FormContext } from "./context/FormContext";
 
 function App() {
+	const { confirmed } = useContext(FormContext);
+
 	return (
 		<>
 			<picture>
@@ -18,10 +22,7 @@ function App() {
 
 			<Card />
 
-			<div className="actions-wrapper">
-				<Form />
-				{/* <Completed /> */}
-			</div>
+			<div className="actions-wrapper">{confirmed ? <Completed /> : <Form />}</div>
 		</>
 	);
 }

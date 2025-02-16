@@ -70,18 +70,4 @@ form {
 			}
 		}
 	}
-
-	.confirm-btn {
-		background-color: $very-dark-violet;
-		color: $white;
-		padding: 16px;
-		border-radius: 8px;
-		transition: 500ms;
-
-		&:disabled {
-			opacity: 0.7;
-			color: $dark-grayish-violet;
-			cursor: not-allowed;
-		}
-	}
 }

@@ -1,1 +1,30 @@
 @import "../../styles/global.scss";
+
+.completed {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+
+	.completed-icon {
+		width: 80px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.text-content {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		gap: 12px;
+
+		.message {
+			text-transform: uppercase;
+			font-size: 28px;
+			letter-spacing: 2px;
+		}
+
+		.description-text {
+			color: $dark-grayish-violet;
+		}
+	}
+}

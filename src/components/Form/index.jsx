@@ -15,6 +15,7 @@ function Form() {
 		expYear,
 		cvc,
 		isValid,
+		handleConfirm,
 	} = useContext(FormContext);
 
 	const expMonthInput = useRef();
@@ -91,7 +92,7 @@ function Form() {
 				</div>
 			</div>
 
-			<button type="submit" className="confirm-btn" disabled={isValid()}>
+			<button type="submit" className="btn" disabled={!isValid()} onClick={(e) => handleConfirm(e)}>
 				Confirm
 			</button>
 		</form>

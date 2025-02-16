@@ -55,10 +55,16 @@ function FormProvider({ children }) {
 			expYear.length === 2 &&
 			cvc.length === 3
 		) {
-			return false;
+			return true;
 		}
 
-		return true;
+		return false;
+	};
+
+	const handleConfirm = (e) => {
+		e.preventDefault();
+
+		isValid() && setConfirmed(true);
 	};
 
 	return (
@@ -75,6 +81,8 @@ function FormProvider({ children }) {
 				expYear,
 				cvc,
 				isValid,
+				handleConfirm,
+				confirmed,
 			}}
 		>
 			{children}
